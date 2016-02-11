@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8">
+		<meta name="keywords" content="key, words">
+		<meta name="description" content="description">
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+		<title>Agency \\ Kelasa</title>
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" media="all" type="text/css" href="css/skeleton.css">
+		<link rel="stylesheet" media="all" type="text/css" href="css/nzs-custom-media.css">
+		<link rel="stylesheet" media="all" type="text/css" href="css/nzs-frame-media.css">
+
+		<link rel="stylesheet" media="all" type="text/css" href="css/menu4.css">
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<!--menu-->
+		<script type="text/javascript">
+			jQuery(document).ready(function() {
+				$('.menu4 li').hover(function() {
+					//show its submenu
+					$('ul', this).slideDown(300);
+				}, function() {
+					//hide its submenu
+					$('ul', this).slideUp(300);
+				});
+
+			});
+		</script>
+		<!--Menu-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('a#hamburger-navigation').click(function() {
+					$('.menu4').slideToggle("slow");
+				});
+
+				var inp = 1;
+				$('.add_new').click(function() {
+					var inp_count = ++inp;
+					var html = '<div class="agency-bottom-inner add_new_content"><input type="text" placeholder="Electrician" class="elec" name="electrician'+inp_count+'" ><input type="text" placeholder="200₹" class="width price" name="price'+inp_count+'" ><input type="text" placeholder="5hr" class="width time" name="time'+inp_count+'" ><a href="javascript:" class="fa fa-trash del_new"></a></div>';
+					$('.add_new_content:last').after(html);		
+				});
+
+				$('.del_new').live('click',function() {
+					if(inp == 1)
+					{
+						alert('Last row. you can not remove it.');
+						return false;
+					}
+					--inp;
+					$(this).parent().remove();
+					var i = inp;
+					while(i--) {
+						$('input:text.elec')[i].name = 'electrician'+ (i+1);
+						$('input:text.price')[i].name = 'price'+ (i+1);
+						$('input:text.time')[i].name = 'time'+ (i+1);
+					}
+				});
+
+			});
+		</script>
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,400italic,700,300' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,900' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" media="all" type="text/css" href="font-awesome-4.3.0/css/font-awesome.min.css">
+		<link rel="icon" href="favicon.png" type="image/x-icon">
+
+	</head>
+
+	<body>
+		<div id="wraper">
+			<!--Header-->
+			<header>
+				<div class="row header">
+					<div class="container clearfix">
+						<div id="logo">
+							<a href="index.html"><h1>KELASA</h1></a>
+						</div>
+						<div id="top_link">
+							<a class="standout" id="hamburger-navigation" href="javascript:"><img alt="Navigation" src="images/hamburger.png" title="Navigation"></a>
+							<div class="menu4">
+								<ul>
+									<!--
+									<li class="active">
+									<a href="#">Home</a>
+									</li>
+									<li>
+									<a href="aboutus.html">About Us</a>
+									</li>
+									<li>
+									<a href="services.html">Services</a>
+									</li>
+									<li>
+									<a href="contactus.html">Contact Us</a>
+									</li>-->
+									<li>
+										<a href="login.html"><!--<span>|</span>--><i class="fa fa-lock"></i>Login / Register</a>
+									</li>
+									<!--<span>|</span>-->
+								</ul>
+							</div>
+						</div>
+						<div class="inner-head">
+							<h1>Agency</h1>
+						</div>
+					</div>
+				</div>
+			</header>
+			<!--Header END-->
+			<!--Content-->
+			<section class="agencypage">
+				<div class="row">
+					<div class="container clearfix">
+						<div class="agency clearfix">
+							<div class="agency-top clearfix">
+								<input type="text" placeholder="Agency Name" />
+								<input type="text" placeholder="Email" />
+								<input type="text" placeholder="Telephone" />
+								<input type="text" placeholder="City" />
+								<input type="text" placeholder="Address" />
+								<input type="text" placeholder="Country" />
+							</div>
+							<div class="agency-bottom clearfix">
+								<h3>Skills</h3>
+								<div class="agency-bottom-inner add_new_content">
+									<input type="text" placeholder="Electrician" class="elec" name="electrician1" />
+									<input type="text" placeholder="200₹" class="width price" name="price1" style="margin: 0 7px;" />
+									<input type="text" placeholder="5hr" class="width time" name="time1" style="margin: 0 10px;" />
+									<a href="javascript:" class="fa fa-trash del_new" style="margin: 0 -4px;"></a>
+								</div>
+								<div class="add">
+									<a href="javascript:" class="fa fa-plus-square-o add_new"></a>
+								</div>
+								
+								<div class="btn myLabel">
+									<i class="fa fa-upload"></i><a>
+									<input type="file" />
+									<span>Upload</span></a>
+								</div>
+							</div>
+						</div>
+						<div class="btn-bottom clearfix">
+							<div class="btn">
+								<i class="fa fa-bookmark-o"></i><a href="#">Save</a>
+							</div>
+							<div class="btn">
+								<i class="fa fa-thumbs-up"></i><a href="#">Approve</a>
+							</div>
+							<div class="btn">
+								<i class="fa fa-trash"></i><a href="#">Delete</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--Content END-->
+		</div>
+
+		<!--Footer-->
+		<footer>
+			<div class="row ">
+				<div class="container clearfix">
+					<div class="footer-nav">
+						<h3>About us</h3>
+						<ul>
+							<li>
+								<a href="index.html">Home</a>
+							</li>
+							<li>
+								<a href="aboutus.html">About us</a>
+							</li>
+							<li>
+								<a href="services.html">Services</a>
+							</li>
+							<li>
+								<a href="#">Why us ?</a>
+							</li>
+							<li>
+								<a href="contactus.html">Contact us</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer-nav">
+						<h3>Help</h3>
+						<ul>
+							<li>
+								<a href="#">FAQ</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer-nav">
+						<h3>Follow us</h3>
+						<ul class="followus">
+							<li>
+								<a href="#" class="fa fa-facebook"></a>
+							</li>
+							<li>
+								<a href="#" class="fa fa-twitter"></a>
+							</li>
+							<li>
+								<a href="#" class="fa fa-google-plus"></a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer-img">
+						<div>
+							<a href="#"><img src="images/android.png" /></a>
+
+							<a href="#"><img src="images/apple.png" /></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row copy">
+				<div class="container clearfix">
+					<p>
+						©2015,  Kelasa
+					</p>
+				</div>
+			</div>
+		</footer>
+		<!--Footer END-->
+	</body>
+</html>

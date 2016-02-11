@@ -1,0 +1,116 @@
+/* ================================================================ 
+This copyright notice must be untouched at all times.
+
+The original version of this stylesheet and the associated (x)html
+is available at http://www.cssplay.co.uk/menus/drop_examples.html
+Copyright (c) 2005-2007 Stu Nicholls. All rights reserved.
+This stylesheet and the assocaited (x)html may be modified in any 
+way to fit your requirements.
+=================================================================== */
+/* commom style for all browsers */
+.container4 { 
+text-align:center; border:0px solid #000000; /*border-width:5px 1px 1px 1px;*/ height:30px;
+margin:0 0 20px 0; /* for this demo only */
+}
+.menu4 { font-size:15px;  margin:0 auto;}
+.menu4 ul {margin:0;margin-left:0px;padding:0px;list-style:none;}
+.menu4 ul li {float:left; position:relative; padding-left:0px;}
+
+.menu4 ul li a{/*background:url(../images/divider.jpg) no-repeat right;*/}
+.menu4 ul li a.last{background-image:none;}
+.menu4 ul li a, .menu4 ul li a:visited {padding: 0 30px; text-align: center;text-decoration: none; color: #302105; display:block; line-height:23px; }
+.menu4 ul li a i{padding: 0 10px 0 40px; color: #12b1e1;}
+.menu4 ul li:last-child{padding-right: 20px;}
+.menu4 ul li.active{background: url(../images/arrow.png) no-repeat center bottom; padding-bottom: 24px;}
+
+.menu4 ul li ul {visibility:hidden; position:absolute; top:0; left:0px; height:0; overflow:hidden;background:none; z-index:100;}
+.menu4 table {margin:-1px; border-collapse:collapse; font-size:1em;}
+
+.menu4 ul li:hover a,
+.menu4 ul li a:hover,
+.menu4 ul li a.active{text-decoration:none;}
+
+.menu4 ul li:hover ul,
+.menu4 ul li a:hover ul {visibility:visible; width:155px; margin-left:8px; height:auto; position:absolute; top:35px; left:-8px; border:0px solid #000000; overflow:visible;}
+
+.menu4 ul li:hover ul li a,
+.menu4 ul li a:hover ul li a {display:block; border:0px solid #00FF33; background:#7e413e; text-align:left; text-decoration:none; color:#ffffff; height:auto; line-height:1.3em; padding-top:8px; padding-bottom:5px; width:110px; w\idth:96px;opacity:0.8;filter:alpha(opacity=80);}
+
+.menu4 ul li:hover ul li a.drop,
+.menu4 ul li a:hover ul li a.drop {display:block; color:#ffffff; height:auto; line-height:1.35em;  padding-top:5px; padding-bottom:5px; width:170px; width:125px;}
+
+.menu4 ul li:hover ul li ul,
+.menu4 ul li a:hover ul li a ul {visibility:hidden; position:absolute; top:0; left:0; height:0; overflow:hidden;}
+
+.menu4 ul li:hover ul li a:hover,
+.menu4 ul li a:hover ul li a:hover {color:#FFFFFF!important; text-decoration:none; background:#520110!important; }
+
+.menu4 ul li:hover ul li:hover ul,
+.menu4 ul li a:hover ul li a:hover ul {visibility:visible; position:absolute; top:0; color:#000; left:145px!important; height:auto; border:0px solid #000000; background:url(./images/spacer.gif)!important; width:180px!important;  padding-top:5px!important; z-index:1000!important; padding-bottom:5px!important;}
+
+.menu4 ul li:hover ul li:hover ul.left,
+.menu4 ul li a:hover ul li a:hover ul.left {left:-166px;}
+
+.menu4 ul li:hover ul li:hover ul li,
+.menu4 ul li a:hover ul li a:hover ul li{ background: none!important; }
+
+.menu4 ul li:hover ul li:hover ul li a,
+.menu4 ul li a:hover ul li a:hover ul li a {text-decoration:none!important; display:block; color:#ffffff!important; height:auto; line-height:1.2em;  padding-top:4px; padding-bottom:7px; width:170px; w\idth:140px;
+background-color:#302105; }
+
+* html .menu4 ul li a:hover ul li a:hover ul li a { padding-top:5px; padding-bottom:5px;}
+
+.menu4 ul li:hover ul li:hover ul li:hover a,
+.menu4 ul li a:hover ul li a:hover ul li a:hover {color:#000000!important; text-decoration:underline; background:none!important; text-decoration:none!important;}
+
+
+@media only screen and (min-width:1180px) and (max-width:1280px) {
+	
+}
+
+@media only screen and (min-width:960px) and (max-width:1179px) {
+.menu4 ul li a, .menu4 ul li a:visited { padding: 0 20px;}	
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+.menu4 ul li a, .menu4 ul li a:visited { padding: 0 12px;}
+.menu4 ul li a i { padding: 0 10px 0 20px;}
+}
+
+@media only screen and (min-width: 640px) and (max-width: 767px) {
+.menu4{display: none; background: #232535; z-index: 9999; border-radius: 5px;}	
+.menu4 { right: 0; position: absolute; width: 460px;}
+.menu4 ul li {float: none; border-bottom: 1px solid #393b4a; padding: 8px 0;}
+.menu4 ul li:last-child{border-bottom: 0;}
+.menu4 ul li a, .menu4 ul li a:visited{color: #ffffff;}
+.menu4 ul li.active{background: none; padding-bottom: 8px;}
+.menu4 span{display: none;}
+.menu4 ul li a i { color: #ffffff; padding: 0 10px 0 0;}
+
+
+}
+
+@media only screen and (min-width: 480px) and (max-width: 639px) {
+.menu4{display: none; background: #232535; z-index: 9999; border-radius: 5px;}	
+.menu4 { right: 0; position: absolute; width: 300px;}
+.menu4 ul li {float: none; border-bottom: 1px solid #393b4a; padding: 8px 0;}
+.menu4 ul li:last-child{border-bottom: 0;}
+.menu4 ul li a, .menu4 ul li a:visited{color: #ffffff;}
+.menu4 ul li.active{background: none; padding-bottom: 8px;}
+.menu4 span{display: none;}
+.menu4 ul li a i { color: #ffffff; padding: 0 10px 0 0;}
+
+	
+}
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+.menu4{display: none; background: #232535; z-index: 9999; border-radius: 5px;}	
+.menu4 { right: 0; position: absolute; width: 300px;}
+.menu4 ul li {float: none; border-bottom: 1px solid #393b4a; padding: 8px 0;}
+.menu4 ul li:last-child{border-bottom: 0;}
+.menu4 ul li a, .menu4 ul li a:visited{color: #ffffff;}
+.menu4 ul li.active{background: none; padding-bottom: 8px;}
+.menu4 span{display: none;}
+.menu4 ul li a i { color: #ffffff; padding: 0 10px 0 0;}
+	
+}
