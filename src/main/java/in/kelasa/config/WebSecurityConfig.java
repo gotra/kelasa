@@ -41,6 +41,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.POST,"/api/google/tokensignin").permitAll()
                 .antMatchers(HttpMethod.POST,"/api/facebook/tokensignin").permitAll()
                 .antMatchers(HttpMethod.POST, "/api/signup").permitAll()
+                .antMatchers("/api/agency/**").permitAll()
+
 
                 //allow anonymous GETs to API
                 .antMatchers(HttpMethod.GET, "/api/**").permitAll()

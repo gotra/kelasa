@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en-US"  data-ng-app="kelasaApp">
+<html lang="en-US" data-ng-app="kelasaApp">
 	<head>
 		<meta charset="utf-8">
 		<meta name="keywords" content="key, words">
 		<meta name="description" content="description">
-		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Kelasa</title>
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 		<link href="css/style.css" rel="stylesheet" type="text/css">
@@ -45,9 +45,49 @@
 
 	</head>
 
-	<body class="login-bg">
-		<div id="wraper" data-ng-view>
+	<body>
+		<div id="wraper">
 			<!--Header-->
+			<header class="header-index">
+				<div class="row header">
+					<div class="container clearfix">
+						<div id="logo">
+							<a href="index.html"><h1>KELASA</h1></a>
+						</div>
+						<div id="top_link">
+							<a class="standout" id="hamburger-navigation" href="javascript:"><img alt="Navigation" src="images/hamburger.png" title="Navigation"></a>
+							<div class="menu4">
+								<ul>
+
+									<li class="active">
+									<a href="#">Home</a>
+									</li>
+									<li>
+									<a href="aboutus.html">About Us</a>
+									</li>
+									<li>
+									<a href="services.html">Services</a>
+									</li>
+									<li>
+									<a href="contactus.html">Contact Us</a>
+									</li>
+									<li>
+										<a href="login.html"><!--<span>|</span>--><i class="fa fa-lock"></i>Login/Register</a>
+									</li>
+									<!--<span>|</span>-->
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<!--Header END-->
+
+			<!--Content-->
+			<section id="content" data-ng-view>
+				<!-- section view will be dynamically replaced here -->
+			</section>
+			<!--Content END-->
 		</div>
 		<div class="clearfix"></div>
 		<!--Footer-->

@@ -1,0 +1,95 @@
+
+
+
+    <!--Content-->
+    <section class="services">
+        <div class="row">
+            <div class="container clearfix">
+                <div class="search">
+                    <div>
+                        <i class="fa fa-map-marker"></i>
+                        <select>
+                            <option>City</option>
+                        </select>
+                    </div>
+                    <div>
+                        <i class="fa fa-search"></i>
+                        <input type="text" placeholder="Search Restaurant" />
+                    </div>
+
+                    <a href="servicesdetails.html">
+                        <input type="submit" value="Search" />
+                    </a>
+                </div>
+                <div class="map1">
+                    <div id="googleMap" style="height:290px;"></div>
+                </div>
+                <div class="agency">
+                    <div class="agency-left">
+                        <h4><a href="servicesdetails.html">Agency Name</a></h4>
+                        <p>
+                            Address Line 1 - City
+                        </p>
+                        <p>
+                            +91XXXXXXXX
+                        </p>
+                        <span>Plumbers available from 200 ₹</span>
+                    </div>
+                    <div class="agency-right">
+                        <p>
+                            <label>4.5</label>110 Reviews
+                        </p>
+                    </div>
+                </div>
+                <div class="agency">
+                    <div class="agency-left">
+                        <h4><a href="servicesdetails.html">Agency Name</a></h4>
+                        <p>
+                            Address Line 1 - City
+                        </p>
+                        <p>
+                            +91XXXXXXXX
+                        </p>
+                        <span>Plumbers available from 200 ₹</span>
+                    </div>
+                    <div class="agency-right">
+                        <p>
+                            <label>4.5</label>110 Reviews
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+
+    <script>
+        var myCenter = new google.maps.LatLng(51.508742, -0.120850);
+
+        function initialize() {
+            var mapProp = {
+                center : myCenter,
+                zoom : 5,
+                mapTypeId : google.maps.MapTypeId.ROADMAP
+            };
+
+            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+            var marker = new google.maps.Marker({
+                position : myCenter,
+                title : 'Click to zoom'
+            });
+
+            marker.setMap(map);
+
+            // Zoom to 9 when clicking on marker
+            google.maps.event.addListener(marker, 'click', function() {
+                map.setZoom(9);
+                map.setCenter(marker.getPosition());
+            });
+        }
+
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+

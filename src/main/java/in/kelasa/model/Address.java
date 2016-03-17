@@ -1,5 +1,7 @@
 package in.kelasa.model;
 
+import com.google.api.client.util.StringUtils;
+
 /**
  * Created by rajeevguru on 25/11/15.
  */
@@ -74,7 +76,13 @@ public class Address {
     }
 
     public String toFormattedAddress() {
-        return streetAddress + " , " + city + " , " + region + " , " + postal + " , " + country;
+        StringBuilder sb = new StringBuilder();
+        sb.append(streetAddress != null ? streetAddress:"")
+                .append(city != null ? city + " , ":"")
+                .append(region!= null? region + " , ":"")
+                .append(postal!= null ? postal + " , ":"")
+                .append(country!=null ? country:"");
+        return sb.toString();
     }
 
 

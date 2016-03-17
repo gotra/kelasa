@@ -18,8 +18,8 @@ margin:0 0 20px 0; /* for this demo only */
 
 .menu4 ul li a{/*background:url(../images/divider.jpg) no-repeat right;*/}
 .menu4 ul li a.last{background-image:none;}
-.menu4 ul li a, .menu4 ul li a:visited {padding: 0 30px; text-align: center;text-decoration: none; color: #302105; display:block; line-height:23px; }
-.menu4 ul li a i{padding: 0 10px 0 40px; color: #12b1e1;}
+.menu4 ul li a, .menu4 ul li a:visited {padding: 0 10px; text-align: center;text-decoration: none; color: #302105; display:block; line-height:23px; }
+.menu4 ul li a i{padding: 0 10px; color: #12b1e1;}
 .menu4 ul li:last-child{padding-right: 20px;}
 .menu4 ul li.active{background: url(../images/arrow.png) no-repeat center bottom; padding-bottom: 24px;}
 
@@ -78,39 +78,17 @@ background-color:#302105; }
 }
 
 @media only screen and (min-width: 640px) and (max-width: 767px) {
-.menu4{display: none; background: #232535; z-index: 9999; border-radius: 5px;}	
-.menu4 { right: 0; position: absolute; width: 460px;}
-.menu4 ul li {float: none; border-bottom: 1px solid #393b4a; padding: 8px 0;}
-.menu4 ul li:last-child{border-bottom: 0;}
-.menu4 ul li a, .menu4 ul li a:visited{color: #ffffff;}
-.menu4 ul li.active{background: none; padding-bottom: 8px;}
-.menu4 span{display: none;}
-.menu4 ul li a i { color: #ffffff; padding: 0 10px 0 0;}
 
 
 }
 
 @media only screen and (min-width: 480px) and (max-width: 639px) {
-.menu4{display: none; background: #232535; z-index: 9999; border-radius: 5px;}	
-.menu4 { right: 0; position: absolute; width: 300px;}
-.menu4 ul li {float: none; border-bottom: 1px solid #393b4a; padding: 8px 0;}
-.menu4 ul li:last-child{border-bottom: 0;}
-.menu4 ul li a, .menu4 ul li a:visited{color: #ffffff;}
-.menu4 ul li.active{background: none; padding-bottom: 8px;}
-.menu4 span{display: none;}
-.menu4 ul li a i { color: #ffffff; padding: 0 10px 0 0;}
+
 
 	
 }
 
 @media only screen and (min-width: 320px) and (max-width: 479px) {
-.menu4{display: none; background: #232535; z-index: 9999; border-radius: 5px;}	
-.menu4 { right: 0; position: absolute; width: 300px;}
-.menu4 ul li {float: none; border-bottom: 1px solid #393b4a; padding: 8px 0;}
-.menu4 ul li:last-child{border-bottom: 0;}
-.menu4 ul li a, .menu4 ul li a:visited{color: #ffffff;}
-.menu4 ul li.active{background: none; padding-bottom: 8px;}
-.menu4 span{display: none;}
-.menu4 ul li a i { color: #ffffff; padding: 0 10px 0 0;}
+.menu4 ul li { padding-left: 0; float: none;}
 	
 }
